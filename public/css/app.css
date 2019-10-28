@@ -11104,6 +11104,11 @@ a.text-dark:focus {
   font-family: Tenor Sans, sans-serif;
 }
 
+body,
+html {
+  background: #fff;
+}
+
 h1,
 h2,
 h3,
@@ -11138,6 +11143,12 @@ h6 {
 .top-nav.navbar a.nav-link {
   color: #191919;
   font-size: 14px;
+}
+
+.top-nav.navbar .donate {
+  margin: -20px 1.25rem;
+  padding: 20px;
+  padding-right: 0;
 }
 
 .top-nav.navbar .donate a.nav-link {
@@ -11180,6 +11191,10 @@ h6 {
   font-size: 16px;
 }
 
+.header .title .info span {
+  color: #ED7F3D;
+}
+
 .header .title .buttons {
   margin-top: 50px;
 }
@@ -11214,15 +11229,34 @@ h6 {
 }
 
 .active-projects .project .project-icon {
-  width: 124px;
+  width: 100px;
+  margin: 15px;
 }
 
 .active-projects .project .project-link {
   font-size: 16px;
   line-height: 19px;
   text-transform: uppercase;
+  text-decoration: none;
   color: #000000;
   border-bottom: 3px solid #ED7F3D;
+}
+
+.active-projects .project .project-link:hover {
+  border-bottom: none;
+  background: #ED7F3D;
+}
+
+.active-projects .project .project-collected {
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.active-projects .project:hover {
+  background: #FFFFFF;
+  border: 1px solid #ED7F3D;
 }
 
 .about {
@@ -11297,7 +11331,7 @@ h6 {
 }
 
 .socials .row {
-  margin-top: 50px;
+  margin-top: 100px;
   padding: 20px;
   background: url("/img/socials-bg.png");
 }

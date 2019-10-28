@@ -1,14 +1,16 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Tenor+Sans|Vollkorn&display=swap');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 * {
     font-family: Tenor Sans, sans-serif;
+}
+
+body, html {
+    background: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,9 +43,15 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
     }
 
-    .donate a.nav-link {
-        text-transform: uppercase;
-        color: #ED7F3D;
+    .donate {
+        margin: -20px $spacer*1.25;
+        padding: 20px;
+        padding-right: 0;
+
+        a.nav-link {
+            text-transform: uppercase;
+            color: #ED7F3D;
+        }
     }
 
     .nav-item.donate {
@@ -79,7 +87,12 @@ h1, h2, h3, h4, h5, h6 {
     .info {
         font-family: Tenor Sans, sans-serif;
         font-size: 16px;
+
+        span {
+            color: #ED7F3D;
+        }
     }
+
     .buttons {
         margin-top: 50px;
 
@@ -94,36 +107,60 @@ h1, h2, h3, h4, h5, h6 {
             margin-right: 20px;
             padding: 5px;
         }
+
         .donate {
             color: #000000;
             border-bottom: 3px solid #ED7F3D;
-        }.more-info {
-             color: #808080;
-         }
+        }
+
+        .more-info {
+            color: #808080;
+        }
     }
 
 }
 
-.active-projects .project {
-    text-align: center;
-    margin-top: 50px;
-    background: #FAFAFA;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 2px;
-    padding: 20px;
+.active-projects {
+    .project {
+        text-align: center;
+        margin-top: 50px;
+        background: #FAFAFA;
+        border: 1px solid #E6E6E6;
+        box-sizing: border-box;
+        border-radius: 2px;
+        padding: 20px;
 
-    .project-icon {
-        width: 124px;
+        .project-icon {
+            width: 100px;
+            margin: 15px;
+        }
+
+        .project-link {
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            color: #000000;
+            border-bottom: 3px solid #ED7F3D;
+        }
+
+        .project-link:hover {
+            border-bottom: none;
+            background: #ED7F3D;
+        }
+
+        .project-collected {
+            border-top: 1px solid #E6E6E6;
+            border-bottom: 1px solid #E6E6E6;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
     }
 
-    .project-link {
-        font-size: 16px;
-        line-height: 19px;
-        text-transform: uppercase;
-
-        color: #000000;
-        border-bottom: 3px solid #ED7F3D;
+    .project:hover {
+        background: #FFFFFF;
+        border: 1px solid #ED7F3D;
     }
 }
 
@@ -173,11 +210,13 @@ h1, h2, h3, h4, h5, h6 {
 
     .nabl-people {
         display: none;
+
         .nabl-name {
             font-size: 22px;
             margin-bottom: 10px;
         }
     }
+
     .nabl-people.active {
         display: block;
     }
@@ -198,7 +237,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 
     .row {
-        margin-top: 50px;
+        margin-top: 100px;
         padding: 20px;
         background: url("/img/socials-bg.png");
     }
@@ -222,6 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .links {
         margin-top: 20px;
+
         a {
             text-decoration: none;
             color: #191919;

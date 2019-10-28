@@ -16,7 +16,7 @@ metadata:
   labels:
     app: saveshies
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: saveshies
@@ -51,7 +51,7 @@ spec:
         - name: registry.wawan.pro
       containers:
         # Our PHP-FPM application
-        - image: registry.wawan.pro/wawan93/saveshies:v0.5
+        - image: registry.wawan.pro/wawan93/saveshies:v0.7
           name: saveshies
           volumeMounts:
             - name: shared-files

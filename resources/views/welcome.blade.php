@@ -37,7 +37,7 @@
 <div class="container">
     <div class="header">
         <div class="row">
-            <div class="col col-md-6">
+            <div class="col-md-7">
                 <div class="title">
                     <h2>Русский север – не помойка!</h2>
                     <p class="info">
@@ -52,8 +52,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-md-6">
-                <img src="/img/pic.svg">
+            <div class="col-md-5">
+                <img class="nature" src="/img/pic.svg">
             </div>
         </div>
     </div>
@@ -143,15 +143,15 @@
 
 <div class="container about">
     <div class="row">
-        <div class="col-6">
-            <p class="about-header">О фонде</p>
-            <p class="about-title">Мирный протест,
-                не нарушающий
-                законодательства
-                страны.</p>
-            <a href="#" class="more-info">Подробнее</a>
+        <div class="col-md-5">
+            <p class="about-header">— О фонде</p>
+            <h4 class="about-title">Мирный протест,<br>
+                не нарушающий<br>
+                законодательства<br>
+                страны.</h4>
+            <div class="more-info"><a href="#">Подробнее</a></div>
         </div>
-        <div class="col-6">
+        <div class="col-7">
             <p class="description">
                 SaveШиес — благотворительный фонд помощи активистам в России.
                 Мы оказываем помощь в сборе средств, консультируем и помогаем предотвратить экологическую катастрофу.
@@ -171,13 +171,9 @@
 
 <div class="container gallery">
     <div class="row">
-        <div class="col-4">
+        <div class="col-12">
             <img src="/img/image 15.png" alt="">
-        </div>
-        <div class="col-4">
             <img src="/img/image 16.png" alt="">
-        </div>
-        <div class="col-4">
             <img src="/img/image 17.png" alt="">
         </div>
     </div>
@@ -191,7 +187,72 @@
     </div>
     <div class="row">
         <div class="col-6">
-
+            <div class="nabl-photos">
+                <div class="nabl-photo active" href="#" data-id="1">
+                    <img src="/img/nabl-photo.png">
+                    <br>
+                    <span>●</span>
+                </div>
+                <div class="nabl-photo" href="#" data-id="2">
+                    <img src="/img/nabl-photo.png">
+                    <br>
+                    <span>●</span>
+                </div>
+                <div class="nabl-photo" href="#" data-id="3">
+                    <img src="/img/nabl-photo.png">
+                    <br>
+                    <span>●</span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="nabl-people active" data-id="1">
+                <div class="nabl-info">
+                    <div class="nabl-name">
+                        Алексей Попов
+                    </div>
+                    <div class="nabl-description">
+                        Влиять на приоритеты фандрайзинговых проектов, на их появление или удаление наблюдательный совет
+                        не может.
+                    </div>
+                    <div class="nabl-links">
+                        <a href="#">Вконтакте</a>
+                        <a href="#">Фейсбук</a>
+                        <a href="#">Инстаграм</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nabl-people" data-id="2">
+                <div class="nabl-info">
+                    <div class="nabl-name">
+                        Алексей Попов
+                    </div>
+                    <div class="nabl-description">
+                        Влиять на приоритеты фандрайзинговых проектов, на их появление или удаление наблюдательный совет
+                        не может.
+                    </div>
+                    <div class="nabl-links">
+                        <a href="#">Вконтакте</a>
+                        <a href="#">Фейсбук</a>
+                        <a href="#">Инстаграм</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nabl-people" data-id="3">
+                <div class="nabl-info">
+                    <div class="nabl-name">
+                        Алексей Попов
+                    </div>
+                    <div class="nabl-description">
+                        Влиять на приоритеты фандрайзинговых проектов, на их появление или удаление наблюдательный совет
+                        не может.
+                    </div>
+                    <div class="nabl-links">
+                        <a href="#">Вконтакте</a>
+                        <a href="#">Фейсбук</a>
+                        <a href="#">Инстаграм</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-6">
             <p class="description">
@@ -200,6 +261,77 @@
                 траты средств и проверять достоверность публичных отчётов. Влиять на приоритеты фандрайзинговых
                 проектов, на их появление или удаление наблюдательный совет не может.
             </p>
+        </div>
+    </div>
+</div>
+
+<div class="container socials">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="info">
+                <h4>Следите за нами в соцсетях</h4>
+                <p>
+                    Влиять на приоритеты фандрайзинговых проектов, на их появление или удаление наблюдательный совет не
+                    может.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="links">
+                <a href="#" class="vk">
+                    <img src="/img/vk.png">
+                </a>
+                <a href="#" class="tg">
+                    <img src="/img/telegram.png">
+                </a>
+                <a href="#" class="fb">
+                    <img src="/img/facebook.png">
+                </a>
+                <a href="#" class="tw">
+                    <img src="/img/twitter.png">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="container footer-nav">
+    <div class="row">
+        <div class="col-md-4">
+            <p>
+                <a class="logo" href="/">
+                    <img src="/img/logo.svg" alt="SaveШиес!">
+                </a>
+            </p>
+            <p>
+                По всем вопросам обращайтесь <br>
+                на <a href="mailto:save-shyes@gmail.com">save-shyes@gmail.com</a>
+            </p>
+        </div>
+        <div class="col-md-8">
+            <ul class="nav links justify-content-end">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Активные сборы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">О фонде</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Отчеты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<div class="container footer">
+    <div class="row">
+        <div class="col-12">
+            <p align="center">© 2019. Проект Благотворительного фонда «SaveШиес».</p>
         </div>
     </div>
 </div>

@@ -7,31 +7,37 @@
     <title>Laravel</title>
 
     <link href="/css/app.css" rel="stylesheet" type="text/css">
+
+    <link rel="preload" href="/js/app.js" as="script">
 </head>
 <body>
 <div class="container">
-    <nav class="top-nav navbar navbar-expand-md navbar-collapse">
+    <nav class="top-nav navbar navbar-expand-md navbar-light">
         <a class="navbar-brand" href="/">
             <img class="logo" src="/img/logo.svg" alt="SaveШиес!">
         </a>
-
-        <ul class="navbar-nav links justify-content-end">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Активные сборы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">О фонде</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Отчеты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-            </li>
-            <li class="nav-item donate">
-                <a class="nav-link " href="#">Поддержать фонд</a>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
+            <ul class="navbar-nav links justify-content-end">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Активные сборы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">О фонде</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Отчеты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+                <li class="nav-item donate">
+                    <a class="nav-link" href="#">Поддержать фонд</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </div>
 <div class="container">
@@ -66,7 +72,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4">
+        <div class="col-md-4">
             <div class="project">
                 <img class="project-icon" src="/img/project-icon.png">
                 <h4 class="project-title">Общий фонд</h4>
@@ -78,7 +84,7 @@
                 <a class="project-link" href="#">Поддержать</a>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
             <div class="project">
                 <img class="project-icon" src="/img/project-icon.png">
                 <h4 class="project-title">Общий фонд</h4>
@@ -90,7 +96,7 @@
                 <a class="project-link" href="#">Поддержать</a>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
             <div class="project">
                 <img class="project-icon" src="/img/project-icon.png">
                 <h4 class="project-title">Общий фонд</h4>
@@ -102,7 +108,7 @@
                 <a class="project-link" href="#">Поддержать</a>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
             <div class="project">
                 <img class="project-icon" src="/img/project-icon.png">
                 <h4 class="project-title">Общий фонд</h4>
@@ -114,7 +120,7 @@
                 <a class="project-link" href="#">Поддержать</a>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
             <div class="project">
                 <img class="project-icon" src="/img/project-icon.png">
                 <h4 class="project-title">Общий фонд</h4>
@@ -126,7 +132,7 @@
                 <a class="project-link" href="#">Поддержать</a>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
             <div class="project">
                 <img class="project-icon" src="/img/project-icon.png">
                 <h4 class="project-title">Общий фонд</h4>
@@ -151,7 +157,7 @@
                 страны.</h4>
             <div class="more-info"><a href="#">Подробнее</a></div>
         </div>
-        <div class="col-7">
+        <div class="col-md-7">
             <p class="description">
                 SaveШиес — благотворительный фонд помощи активистам в России.
                 Мы оказываем помощь в сборе средств, консультируем и помогаем предотвратить экологическую катастрофу.
@@ -172,9 +178,17 @@
 <div class="container gallery">
     <div class="row">
         <div class="col-12">
-            <img src="/img/image 15.png" alt="">
-            <img src="/img/image 16.png" alt="">
-            <img src="/img/image 17.png" alt="">
+            <div class="spotlight-group">
+                <a class="spotlight" href="/img/image 15.png">
+                    <img src="/img/image 15.png" alt="">
+                </a>
+                <a class="spotlight" href="/img/image 16.png">
+                    <img src="/img/image 16.png" alt="">
+                </a>
+                <a class="spotlight" href="/img/image 17.png">
+                    <img src="/img/image 17.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -186,7 +200,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
             <div class="nabl-photos">
                 <div class="nabl-photo active" href="#" data-id="1">
                     <img src="/img/nabl-photo.png">
@@ -254,7 +268,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
             <p class="description">
                 Наблюдательный совет сформирован из публичных защитников Шиеса и имеет возможность наблюдать поступления
                 и переводы на онлайн-кассу, банковский счёт и другие платежные сервисы, контролировать эффективность
@@ -335,6 +349,8 @@
         </div>
     </div>
 </div>
+
+<script src="/js/app.js" async></script>
 
 </body>
 </html>

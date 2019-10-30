@@ -17,12 +17,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Vollkorn, serif;
 }
 
-.container .row {
-    margin: auto 100px;
+@include media-breakpoint-up(md) {
+    .container .row {
+        margin: auto 100px;
+    }
 }
 
 .top-nav.navbar {
-    height: 81px;
+    min-height: 80px;
     font-family: 'Tenor Sans', sans-serif;
     border-bottom: 1px solid #EBEBEB;
 
@@ -30,8 +32,12 @@ h1, h2, h3, h4, h5, h6 {
         max-height: 40px;
     }
 
-    .links {
+    .collapse {
         width: 100%;
+
+        .links {
+            width: 100%;
+        }
     }
 
     .nav-item {
@@ -43,21 +49,24 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
     }
 
-    .donate {
-        margin: -20px $spacer*1.25;
-        padding: 20px;
-        padding-right: 0;
+    @include media-breakpoint-up(md) {
+        .donate {
+            margin: -20px $spacer*1.25;
+            padding: 20px;
+            padding-right: 0;
+        }
 
-        a.nav-link {
-            text-transform: uppercase;
-            color: #ED7F3D;
+        .nav-item.donate {
+            border-left: 1px solid #EBEBEB;
+            padding-left: $spacer*2;
         }
     }
 
-    .nav-item.donate {
-        border-left: 1px solid #EBEBEB;
-        padding-left: $spacer*2;
+    .donate a.nav-link {
+        text-transform: uppercase;
+        color: #ED7F3D;
     }
+
 }
 
 .header {
@@ -78,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 139px;
 
     h2 {
-        white-space: nowrap;
+        //white-space: nowrap;
         font-family: Vollkorn, serif;
         font-size: 32px;
         line-height: 61px;
@@ -197,6 +206,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.gallery {
+    .row > div {
+        overflow: hidden;
+
+        .spotlight-group {
+            min-width: 100%;
+            white-space: nowrap;
+        }
+    }
+}
+
 .nabl {
     margin-top: 100px;
 
@@ -205,6 +225,10 @@ h1, h2, h3, h4, h5, h6 {
             text-align: center;
             padding: 20px;
             float: left;
+
+            img {
+                width: 100px;
+            }
         }
     }
 
@@ -229,6 +253,7 @@ h1, h2, h3, h4, h5, h6 {
             color: #ED7F3D;
             text-transform: uppercase;
             border-bottom: 1px dotted #ED7F3D;
+            text-decoration: none;
         }
     }
 }

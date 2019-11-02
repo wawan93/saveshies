@@ -13,20 +13,21 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 
 Route::get('/volunteers', function () {
     return view('volunteers');
-});
+})->name('volunteers');
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/support', function () {
+    return view('support');
+})->name('support');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/donate', 'DonationController@donate')->name('donate');

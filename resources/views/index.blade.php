@@ -407,16 +407,16 @@
                 <nav class="menu">
                     <ul class="menu__list listReset">
                         <li class="menu__item">
-                            <a class="menu__link" href="#0">Активные сборы</a>
+                            <a class="menu__link" href="/#activeDonation">Активные сборы</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="about.html">О фонде</a>
+                            <a class="menu__link" href="/about">О фонде</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="volunteers.html">Волонтеры</a>
+                            <a class="menu__link" href="/volunteers">Волонтеры</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#0">Контакты</a>
+                            <a class="menu__link" href="/#socials">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -434,7 +434,7 @@
             </div>
             <div class="modal__form">
                 <!-- form--donate-->
-                <form class="form form--donate">
+                <form class="form form--donate" method="POST" action="{{ route('donate') }}">
                     <fieldset class="form__item form__item--type">
                         <legend class="form__label">Вид пожертвования</legend>
                         <div class="form__row form__row--radio">

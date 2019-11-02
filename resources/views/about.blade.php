@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="/css/styles.css?800">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body class="page page--front">
@@ -146,6 +148,7 @@
             <div class="modal__form">
                 <!-- form--donate-->
                 <form class="form form--donate" method="POST" action="{{ route('donate') }}">
+                    @csrf
                     <fieldset class="form__item form__item--type">
                         <legend class="form__label">Вид пожертвования</legend>
                         <div class="form__row form__row--radio">

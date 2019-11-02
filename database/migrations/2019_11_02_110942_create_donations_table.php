@@ -16,9 +16,9 @@ class CreateDonationsTable extends Migration
         Schema::create('donations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('donor_id');
-            $table->boolean('recurrent');
+            $table->boolean('recurrent')->default(false);
             $table->unsignedInteger('amount');
-            $table->enum('payed_through', ['', 'yd', 'btc', 'direct']);
+            $table->enum('payed_through', ['', 'yd', 'btc', 'direct'])->default('');
             $table->timestamps();
         });
     }

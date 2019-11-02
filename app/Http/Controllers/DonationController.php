@@ -16,8 +16,7 @@ class DonationController extends Controller
             $request->only([
                 'email',
                 'name',
-                'surname',
-                'referrer'
+                'surname'
             ])
         );
 
@@ -26,7 +25,7 @@ class DonationController extends Controller
             'amount' => $request->get('amount'),
         ]);
 
-        if ($donation) {
+        if ($donation === null) {
             throw new BadRequestHttpException();
         }
 

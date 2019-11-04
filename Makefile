@@ -16,4 +16,5 @@ push:
 	docker push $(REPO)
 
 rollup:
+	kubectl --namespace=$(NAMESPACE) apply -f k8s/deployment.yaml
 	kubectl --namespace=$(NAMESPACE) delete pods --all

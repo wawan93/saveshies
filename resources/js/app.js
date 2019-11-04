@@ -1,8 +1,4 @@
 require('./bootstrap');
-require('spotlight.js');
-
-Spotlight.init();
-
 window.Vue = require('vue');
 
 /**

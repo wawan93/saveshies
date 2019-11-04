@@ -37,9 +37,9 @@
                     </ul>
                 </nav>
             </div>
+            <a class="button header__button" href="#0" data-modal=".modal--donate">Поддержать фонд</a>
             <button class="header__burger mobMenu__burger"><span class="visually-hidden">Меню</span><span class="icon"></span>
             </button>
-            <a class="button header__button" href="#0" data-modal=".modal--donate">Поддержать фонд</a>
         </div>
     </header>
     <div class="page__row">
@@ -77,6 +77,10 @@
                                         <img src="/files/donations/old-tablet.svg" alt="">
                                     </div>
                                     <div class="donationCard__cnt">
+                                        <div class="donationCard__header">
+                                            <h3 class="donationCard__title">Общий фонд</h3>
+                                            <p class="donationCard__body">Деньги распределяются по мере необходимости на проекты.</p>
+                                        </div>
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Собрано</div>
@@ -102,10 +106,14 @@
                                         <img src="/files/donations/price-list.svg" alt="">
                                     </div>
                                     <div class="donationCard__cnt">
-                                        <div class="donationCard__donation barLine" data-bar-from="22259670" data-bar-to="30000000">
-                                            <div class="donationCard__now">22 259 670 ₽</div> из <div class="donationCard__need">30 000 000 ₽</div>
+                                        <div class="donationCard__header">
+                                            <h3 class="donationCard__title">Штрафы</h3>
+                                            <p class="donationCard__body">На оплату штрафов задержанных активистов.</p>
                                         </div>
                                         <div class="donationCard__infos">
+                                            <div class="donationCard__info barLine" data-bar-from="22259670" data-bar-to="30000000">
+                                                <div class="donationCard__now">22 259 670 ₽</div> из <div class="donationCard__need">30 000 000 ₽</div>
+                                            </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Разовая поддержка</div>
                                                 <div class="donationCard__value">57 000 чел</div>
@@ -126,12 +134,22 @@
                                         <img src="/files/donations/scales.svg" alt="Юридическая помощь">
                                     </div>
                                     <div class="donationCard__cnt">
-                                        <h3 class="donationCard__title">Юридическая помощь</h3>
-                                        <p class="donationCard__body">На оплату услуг адвокатов и юристов для активистов.</p>
+                                        <div class="donationCard__header">
+                                            <h3 class="donationCard__title">Юридическая помощь</h3>
+                                            <p class="donationCard__body">На оплату услуг адвокатов и юристов для активистов.</p>
+                                        </div>
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Собрано</div>
                                                 <div class="donationCard__value">22 259 670 ₽</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Разовая поддержка</div>
+                                                <div class="donationCard__value">57 000 чел</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Ежемесячная поддержка</div>
+                                                <div class="donationCard__value">7 120 чел</div>
                                             </div>
                                         </div>
                                     </div>
@@ -145,12 +163,22 @@
                                         <img src="/files/donations/tickets.svg" alt="На билеты">
                                     </div>
                                     <div class="donationCard__cnt">
-                                        <h3 class="donationCard__title">На билеты</h3>
-                                        <p class="donationCard__body">Купить билет желающему присоединиться активисту.</p>
+                                        <div class="donationCard__header">
+                                            <h3 class="donationCard__title">На билеты</h3>
+                                            <p class="donationCard__body">Купить билет желающему присоединиться активисту.</p>
+                                        </div>
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Собрано</div>
                                                 <div class="donationCard__value">22 259 670 ₽</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Разовая поддержка</div>
+                                                <div class="donationCard__value">57 000 чел</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Ежемесячная поддержка</div>
+                                                <div class="donationCard__value">7 120 чел</div>
                                             </div>
                                         </div>
                                     </div>
@@ -164,12 +192,22 @@
                                         <img src="/files/donations/forest.svg" alt="Восстановление леса">
                                     </div>
                                     <div class="donationCard__cnt">
-                                        <h3 class="donationCard__title">Восстановление леса</h3>
-                                        <p class="donationCard__body">На восстановление леса <br> после работ.</p>
+                                        <div class="donationCard__header">
+                                            <h3 class="donationCard__title">Восстановление леса</h3>
+                                            <p class="donationCard__body">На восстановление леса <br> после работ.</p>
+                                        </div>
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Собрано</div>
                                                 <div class="donationCard__value">22 259 670 ₽</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Разовая поддержка</div>
+                                                <div class="donationCard__value">57 000 чел</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Ежемесячная поддержка</div>
+                                                <div class="donationCard__value">7 120 чел</div>
                                             </div>
                                         </div>
                                     </div>
@@ -183,12 +221,22 @@
                                         <img src="/files/donations/techs.svg" alt="Технические нужды">
                                     </div>
                                     <div class="donationCard__cnt">
-                                        <h3 class="donationCard__title">Технические нужды</h3>
-                                        <p class="donationCard__body">На покупку спутникового интернета, снегохода и другого.</p>
+                                        <div class="donationCard__header">
+                                            <h3 class="donationCard__title">Технические нужды</h3>
+                                            <p class="donationCard__body">На покупку спутникового интернета, снегохода и другого.</p>
+                                        </div>
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info barLine" data-bar-from="22259670" data-bar-to="30000000">
                                                 <div class="donationCard__label">Собрано</div>
                                                 <div class="donationCard__value">22 259 670 ₽</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Разовая поддержка</div>
+                                                <div class="donationCard__value">57 000 чел</div>
+                                            </div>
+                                            <div class="donationCard__info">
+                                                <div class="donationCard__label">Ежемесячная поддержка</div>
+                                                <div class="donationCard__value">7 120 чел</div>
                                             </div>
                                         </div>
                                     </div>
@@ -231,44 +279,32 @@
                 <div class="gallery__inner inner">
                     <ul class="gallery__slides listReset">
                         <li class="gallery__slide">
-                            <a href="/files/riot/riot-01.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-01.jpg" alt="">
-                            </a>
+                            <img class="gallery__image" src="/files/riot/riot-01.jpg" alt="" />
+                            <div class="gallery__txt">
+                                <h3 class="gallery__title">Мирный протест, не нарушающий законодательства страны.</h3>
+                                <a class="button gallery__button" href="/files/riot/riot-01.jpg" data-title="Мирный протест, не нарушающий законодательства страны.">Увеличить</a>
+                            </div>
                         </li>
                         <li class="gallery__slide">
-                            <a href="/files/riot/riot-02.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-02.jpg" alt="">
-                            </a>
+                            <img class="gallery__image" src="/files/riot/riot-02.jpg" alt="" />
+                            <div class="gallery__txt">
+                                <h3 class="gallery__title">Мирный протест, не нарушающий законодательства страны.</h3>
+                                <a class="button gallery__button" href="/files/riot/riot-02.jpg" data-title="Мирный протест, не нарушающий законодательства страны.">Увеличить</a>
+                            </div>
                         </li>
                         <li class="gallery__slide">
-                            <a href="/files/riot/riot-03.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-03.jpg" alt="">
-                            </a>
+                            <img class="gallery__image" src="/files/riot/riot-03.jpg" alt="" />
+                            <div class="gallery__txt">
+                                <h3 class="gallery__title">Мирный протест, не нарушающий законодательства страны.</h3>
+                                <a class="button gallery__button" href="/files/riot/riot-03.jpg" data-title="Мирный протест, не нарушающий законодательства страны.">Увеличить</a>
+                            </div>
                         </li>
                         <li class="gallery__slide">
-                            <a href="/files/riot/riot-04.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-04.jpg" alt="">
-                            </a>
-                        </li>
-                        <li class="gallery__slide">
-                            <a href="/files/riot/riot-01.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-01.jpg" alt="">
-                            </a>
-                        </li>
-                        <li class="gallery__slide">
-                            <a href="/files/riot/riot-02.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-02.jpg" alt="">
-                            </a>
-                        </li>
-                        <li class="gallery__slide">
-                            <a href="/files/riot/riot-03.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-03.jpg" alt="">
-                            </a>
-                        </li>
-                        <li class="gallery__slide">
-                            <a href="/files/riot/riot-04.jpg" data-fslightbox>
-                                <img src="/files/riot/riot-04.jpg" alt="">
-                            </a>
+                            <img class="gallery__image" src="/files/riot/riot-04.jpg" alt="" />
+                            <div class="gallery__txt">
+                                <h3 class="gallery__title">Мирный протест, не нарушающий законодательства страны.</h3>
+                                <a class="button gallery__button" href="/files/riot/riot-04.jpg" data-title="Мирный протест, не нарушающий законодательства страны.">Увеличить</a>
+                            </div>
                         </li>
                     </ul>
                     <div class="gallery__arrows">
@@ -515,7 +551,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="/js/build.js?587"></script>
+<script type="text/javascript" src="/js/build.js?393"></script>
 </body>
 
 </html>

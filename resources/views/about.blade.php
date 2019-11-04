@@ -37,9 +37,9 @@
                     </ul>
                 </nav>
             </div>
+            <a class="button header__button" href="#" data-modal=".modal--donate">Поддержать фонд</a>
             <button class="header__burger mobMenu__burger"><span class="visually-hidden">Меню</span><span class="icon"></span>
             </button>
-            <a class="button header__button" href="#" data-modal=".modal--donate">Поддержать фонд</a>
         </div>
     </header>
     <div class="page__row">

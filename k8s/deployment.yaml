@@ -51,7 +51,7 @@ spec:
         - name: registry.wawan.pro
       containers:
         # Our PHP-FPM application
-        - image: registry.wawan.pro/wawan93/saveshies:latest
+        - image: registry.wawan.pro/wawan93/saveshies:v1.1.2
           name: saveshies
           volumeMounts:
             - name: shared-files
@@ -76,9 +76,9 @@ spec:
             - name: APP_ENV
               value: 'production'
             - name: APP_URL
-              value: 'https://shies.demo.wawan.pro'
+              value: 'https://saveshies.ru'
             - name: ASSET_URL
-              value: 'https://shies.demo.wawan.pro'
+              value: 'https://saveshies.ru'
             - name: APP_KEY
               valueFrom:
                 secretKeyRef:

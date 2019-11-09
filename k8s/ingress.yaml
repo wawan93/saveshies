@@ -9,9 +9,17 @@ spec:
   tls:
     - hosts:
         - shies.demo.wawan.pro
+        - saveshies.ru
       secretName: letsencrypt-prod
   rules:
     - host: shies.demo.wawan.pro
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: saveshies
+              servicePort: 80
+    - host: saveshies.ru
       http:
         paths:
           - path: /

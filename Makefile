@@ -2,7 +2,7 @@ REPO=registry.wawan.pro/wawan93/saveshies
 DOCKERFILE_PATH=./k8s/Dockerfile
 NAMESPACE=saveshies
 
-all: test build push rollup
+all: test build push
 
 .PHONY: all
 
@@ -15,6 +15,6 @@ build:
 push:
 	docker push $(REPO)
 
-rollup:
+deploy:
 	kubectl --namespace=$(NAMESPACE) apply -f k8s/deployment.yaml
-	kubectl --namespace=$(NAMESPACE) delete pods --all
+# 	kubectl --namespace=$(NAMESPACE) delete pods --all

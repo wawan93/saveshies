@@ -5,7 +5,7 @@
     <title>Шиес | Главная</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link rel="stylesheet" href="/css/styles.css?998">
+    <link rel="stylesheet" href="/css/styles.css?94">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -96,7 +96,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" href="#0">Поддержать</a>
+                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
                             <li class="activeDonation__item">
@@ -124,7 +124,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" href="#0">Поддержать</a>
+                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
                             <li class="activeDonation__item">
@@ -153,7 +153,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" href="#0">Поддержать</a>
+                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
                             <li class="activeDonation__item">
@@ -182,7 +182,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" href="#0">Поддержать</a>
+                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
                             <li class="activeDonation__item">
@@ -211,7 +211,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" href="#0">Поддержать</a>
+                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
                             <li class="activeDonation__item">
@@ -240,7 +240,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" href="#0">Поддержать</a>
+                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
                         </ul>
@@ -252,7 +252,7 @@
                     <div class="b-about__titleSide">
                         <div class="b-about__upperTitle">О фонде</div>
                         <h2 class="b-about__title blockTitle">Мирный протест, не нарушающий законодательства страны.</h2>
-                        <a class="button b-about__button" href="#0">Подробнее</a>
+                        <a class="button b-about__button" href="/about">Подробнее</a>
                     </div>
                     <div class="b-about__bodySide">
                         <div class="b-about__body">
@@ -262,13 +262,13 @@
                             <h3 class="b-about__purposeTitle">Основные цели:</h3>
                             <ul class="b-about__list listReset">
                                 <li class="b-about__item">
-                                    <a class="b-about__link" href="#0">Переход на новую систему обращения с отходами</a>
+                                    <a class="b-about__link">Переход на новую систему обращения с отходами</a>
                                 </li>
                                 <li class="b-about__item">
-                                    <a class="b-about__link" href="#0">Рекультивация действующих полигонов</a>
+                                    <a class="b-about__link">Рекультивация действующих полигонов</a>
                                 </li>
                                 <li class="b-about__item">
-                                    <a class="b-about__link" href="#0">Переход на новую систему обращения с отходами</a>
+                                    <a class="b-about__link">Переход на новую систему обращения с отходами</a>
                                 </li>
                             </ul>
                         </div>
@@ -551,7 +551,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="/js/build.js?393"></script>
+<script type="text/javascript" src="/js/build.js?39"></script>
 </body>
 
 </html>

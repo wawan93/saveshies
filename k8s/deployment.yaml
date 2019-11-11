@@ -51,7 +51,7 @@ spec:
         - name: registry.wawan.pro
       containers:
         # Our PHP-FPM application
-        - image: registry.wawan.pro/wawan93/saveshies:v1.1.2
+        - image: registry.wawan.pro/wawan93/saveshies:v1.1.4
           name: saveshies
           volumeMounts:
             - name: shared-files

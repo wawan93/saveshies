@@ -20,9 +20,9 @@ class CreateProjectsTable extends Migration
             $table->text('description')->nullable();
             $table->string('icon')->nullable();
             $table->integer('goal')->unsigned();
-            $table->integer('collected')->unsigned();
-            $table->integer('regular_donors')->unsigned();
-            $table->integer('onetime_donors')->unsigned();
+            $table->integer('collected')->unsigned()->default(0);
+            $table->integer('regular_donors')->unsigned()->default(0);
+            $table->integer('onetime_donors')->unsigned()->default(0);
             $table->boolean('is_active')->nullable();
         });
     }

@@ -91,157 +91,40 @@
                                     <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
+                            @foreach($projects as $project)
+
                             <li class="activeDonation__item">
                                 <!-- mixin donation-card-->
                                 <article class="donationCard">
                                     <div class="donationCard__icon">
-                                        <img src="/files/donations/price-list.svg" alt="">
+                                        <img src="{{ url(Storage::url($project->icon)) }}" alt="">
                                     </div>
                                     <div class="donationCard__cnt">
                                         <div class="donationCard__header">
-                                            <h3 class="donationCard__title">Штрафы</h3>
-                                            <p class="donationCard__body">На оплату штрафов задержанных активистов.</p>
+                                            <h3 class="donationCard__title">{{ $project->title }}</h3>
+                                            <p class="donationCard__body">{{ $project->description }}</p>
                                         </div>
                                         <div class="donationCard__infos">
-                                            <div class="donationCard__info barLine" data-bar-from="22259670"
-                                                 data-bar-to="30000000">
-                                                <div class="donationCard__now">22 259 670 ₽</div>
+                                            <div class="donationCard__info barLine" data-bar-from="{{ $project->collected }}"
+                                                 data-bar-to="{{ $project->goal }}">
+                                                <div class="donationCard__now">{{ $project->collected }} ₽</div>
                                                 из
-                                                <div class="donationCard__need">30 000 000 ₽</div>
+                                                <div class="donationCard__need">{{ $project->goal }} ₽</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">57 000 чел</div>
+                                                <div class="donationCard__value">{{ $project->ontime_donors }} чел</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">7 120 чел</div>
+                                                <div class="donationCard__value">{{ $project->regular_donors }} чел</div>
                                             </div>
                                         </div>
                                     </div>
                                     <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
                                 </article>
                             </li>
-                            <li class="activeDonation__item">
-                                <!-- mixin donation-card-->
-                                <article class="donationCard">
-                                    <div class="donationCard__icon">
-                                        <img src="/files/donations/scales.svg" alt="Юридическая помощь">
-                                    </div>
-                                    <div class="donationCard__cnt">
-                                        <div class="donationCard__header">
-                                            <h3 class="donationCard__title">Юридическая помощь</h3>
-                                            <p class="donationCard__body">На оплату услуг адвокатов и юристов для
-                                                активистов.</p>
-                                        </div>
-                                        <div class="donationCard__infos">
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Собрано</div>
-                                                <div class="donationCard__value">22 259 670 ₽</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">57 000 чел</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">7 120 чел</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
-                                </article>
-                            </li>
-                            <li class="activeDonation__item">
-                                <!-- mixin donation-card-->
-                                <article class="donationCard">
-                                    <div class="donationCard__icon">
-                                        <img src="/files/donations/tickets.svg" alt="На билеты">
-                                    </div>
-                                    <div class="donationCard__cnt">
-                                        <div class="donationCard__header">
-                                            <h3 class="donationCard__title">На билеты</h3>
-                                            <p class="donationCard__body">Купить билет желающему присоединиться
-                                                активисту.</p>
-                                        </div>
-                                        <div class="donationCard__infos">
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Собрано</div>
-                                                <div class="donationCard__value">22 259 670 ₽</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">57 000 чел</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">7 120 чел</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
-                                </article>
-                            </li>
-                            <li class="activeDonation__item">
-                                <!-- mixin donation-card-->
-                                <article class="donationCard">
-                                    <div class="donationCard__icon">
-                                        <img src="/files/donations/forest.svg" alt="Восстановление леса">
-                                    </div>
-                                    <div class="donationCard__cnt">
-                                        <div class="donationCard__header">
-                                            <h3 class="donationCard__title">Восстановление леса</h3>
-                                            <p class="donationCard__body">На восстановление леса <br> после работ.</p>
-                                        </div>
-                                        <div class="donationCard__infos">
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Собрано</div>
-                                                <div class="donationCard__value">22 259 670 ₽</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">57 000 чел</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">7 120 чел</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
-                                </article>
-                            </li>
-                            <li class="activeDonation__item">
-                                <!-- mixin donation-card-->
-                                <article class="donationCard">
-                                    <div class="donationCard__icon">
-                                        <img src="/files/donations/techs.svg" alt="Технические нужды">
-                                    </div>
-                                    <div class="donationCard__cnt">
-                                        <div class="donationCard__header">
-                                            <h3 class="donationCard__title">Технические нужды</h3>
-                                            <p class="donationCard__body">На покупку спутникового интернета, снегохода и
-                                                другого.</p>
-                                        </div>
-                                        <div class="donationCard__infos">
-                                            <div class="donationCard__info barLine" data-bar-from="22259670"
-                                                 data-bar-to="30000000">
-                                                <div class="donationCard__label">Собрано</div>
-                                                <div class="donationCard__value">22 259 670 ₽</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">57 000 чел</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">7 120 чел</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
-                                </article>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

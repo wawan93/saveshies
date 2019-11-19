@@ -10,22 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
-})->name('index');
-
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-Route::get('/volunteers', function () {
-    return view('volunteers');
-})->name('volunteers');
-
-Route::get('/support', function () {
-    return view('support');
-})->name('support');
+Route::get('/', 'IndexController@index')->name('index');
+Route::get('/about', 'IndexController@about')->name('about');
+Route::get('/volunteers', 'IndexController@volunteers')->name('volunteers');
+Route::get('/support', 'IndexController@support')->name('support');
 
 Auth::routes();
 

@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -62,7 +67,7 @@ class ProjectsController extends Controller
         $requestData = $request->all();
                 if ($request->hasFile('icon')) {
             $requestData['icon'] = $request->file('icon')
-                ->store('uploads', 'public');
+                ->storeAs('uploads', $request->file('icon')->getClientOriginalName(), 'public');
         }
 
         Project::create($requestData);
@@ -113,8 +118,9 @@ class ProjectsController extends Controller
 		]);
         $requestData = $request->all();
                 if ($request->hasFile('icon')) {
+
             $requestData['icon'] = $request->file('icon')
-                ->store('uploads', 'public');
+                ->storeAs('uploads', $request->file('icon')->getClientOriginalName(), 'public');
         }
 
         $project = Project::findOrFail($id);

@@ -17,4 +17,7 @@ push:
 
 deploy:
 	kubectl --namespace=$(NAMESPACE) apply -f k8s/deployment.yaml
-# 	kubectl --namespace=$(NAMESPACE) delete pods --all
+
+deploy-dev:
+	kubectl --namespace=$(NAMESPACE)-dev apply -f k8s/deployment-dev.yaml
+	kubectl --namespace=$(NAMESPACE)-dev delete pods --all

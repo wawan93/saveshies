@@ -1,0 +1,46 @@
+{
+    "fields": [
+        {
+            "name": "title",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "type": "text"
+        },
+        {
+            "name": "goal",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "collected",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "icon",
+            "type": "file"
+        },
+        {
+            "name": "regular_donors",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "onetime_donors",
+            "type": "integer#unsigned"
+        },
+        {
+            "name": "is_active",
+            "type": "boolean"
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "description",
+            "rules": "required|min:10"
+        }
+    ]
+}

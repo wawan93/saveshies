@@ -14,15 +14,16 @@ class CreateProjectsTable extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->bigIncrements('id');
-
-            $table->string('title');
-            $table->text('description');
-            $table->string('icon');
-            $table->integer('goal');
-            $table->integer('collected');
-
+            $table->increments('id');
             $table->timestamps();
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('icon')->nullable();
+            $table->integer('goal')->unsigned();
+            $table->integer('collected')->unsigned();
+            $table->integer('regular_donors')->unsigned();
+            $table->integer('onetime_donors')->unsigned();
+            $table->boolean('is_active')->nullable();
         });
     }
 

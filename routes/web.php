@@ -29,5 +29,13 @@ Route::get('/support', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
 Route::post('/donate', 'DonationController@donate')->name('donate');
+
+Route::resource('admin/projects', 'Admin\\ProjectsController');
+
+Route::resource('admin/projects', 'Admin\\ProjectsController');
+Route::resource('admin/projects', 'Admin\\ProjectsController');
+Route::resource('admin/projects', 'Admin\\ProjectsController');
+Route::resource('admin/projects', 'Admin\\ProjectsController');
+Route::resource('admin/projects', 'Admin\\ProjectsController');

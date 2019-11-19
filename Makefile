@@ -2,7 +2,7 @@ REPO=registry.wawan.pro/wawan93/saveshies
 DOCKERFILE_PATH=./k8s/Dockerfile
 NAMESPACE=saveshies
 
-all: test build push
+all: test build push deploy-dev
 
 .PHONY: all
 

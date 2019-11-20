@@ -76,15 +76,15 @@
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Собрано</div>
-                                                <div class="donationCard__value">22 259 670 ₽</div>
+                                                <div class="donationCard__value">{{ $totals['money'] }} ₽</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">57 000 чел</div>
+                                                <div class="donationCard__value">{{ $totals['onetime_donors'] }} чел</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">7 120 чел</div>
+                                                <div class="donationCard__value">{{ $totals['regular_donors'] }} чел</div>
                                             </div>
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">{{ $project->ontime_donors }} чел</div>
+                                                <div class="donationCard__value">{{ $project->onetime_donors }} чел</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Ежемесячная поддержка</div>

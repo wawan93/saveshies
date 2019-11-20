@@ -10,7 +10,13 @@ class IndexController extends Controller
     public function index()
     {
         $projects = Project::active()->get();
-        return view('index', compact('projects'));
+        $totals = $projects->reduce(function ($carry, Project $item) {
+            $carry['money'] += $item->collected;
+            $carry['onetime_donors'] += $item->onetime_donors;
+            $carry['regular_donors'] += $item->regular_donors;
+            return $carry;
+        }, ['money' => 0, 'onetime_donors' => 0, 'regular_donors' => 0]);
+        return view('index', compact('projects', 'totals'));
     }
 
     public function about()

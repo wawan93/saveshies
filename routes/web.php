@@ -17,13 +17,12 @@ Route::get('/support', 'IndexController@support')->name('support');
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('home');
 Route::post('/donate', 'DonationController@donate')->name('donate');
 
-Route::resource('admin/projects', 'Admin\\ProjectsController');
+Route::prefix('/admin')
+    ->middleware('auth')
+    ->group(function () {
+        Route::get('/', 'HomeController@index')->name('home');
 
-Route::resource('admin/projects', 'Admin\\ProjectsController');
-Route::resource('admin/projects', 'Admin\\ProjectsController');
-Route::resource('admin/projects', 'Admin\\ProjectsController');
-Route::resource('admin/projects', 'Admin\\ProjectsController');
-Route::resource('admin/projects', 'Admin\\ProjectsController');
+        Route::resource('projects', 'Admin\\ProjectsController');
+    });

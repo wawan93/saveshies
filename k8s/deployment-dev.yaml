@@ -51,7 +51,7 @@ spec:
         - name: registry.wawan.pro
       containers:
         # Our PHP-FPM application
-        - image: registry.wawan.pro/wawan93/saveshies:latest
+        - image: registry.wawan.pro/wawan93/saveshies:develop
           imagePullPolicy: Always
           name: saveshies
           volumeMounts:

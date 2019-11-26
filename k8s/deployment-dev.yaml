@@ -72,10 +72,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command:
-                  - "/bin/bash"
-                  - "-c"
-                  - "cp -r /app/. /var/www/html && cd /var/www/html && php artisan cache:clear && php artisan view:clear && php artisan config:clear && php artisan storage:link"
+                command: ["/bin/sh", "-c", "cp -r /app/. /var/www/html"]
           env:
             - name: APP_ENV
               value: 'production'

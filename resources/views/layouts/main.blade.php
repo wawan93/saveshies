@@ -164,19 +164,19 @@
                                 <input type="radio" name="payment" value="yandex" checked><span
                                     class="form__paymentText">Яндекс. деньги</span>
                             </label>
-                            <label class="form__payment form__payment--card">
-                                <input type="radio" name="payment" value="card"><span class="form__paymentText">Банковский перевод</span>
-                            </label>
-                            <label class="form__payment form__payment--bitcoin">
-                                <input type="radio" name="payment" value="bitcoin"><span class="form__paymentText">Биткойн перевод</span>
-                            </label>
+{{--                            <label class="form__payment form__payment--card">--}}
+{{--                                <input type="radio" name="payment" value="card"><span class="form__paymentText">Банковский перевод</span>--}}
+{{--                            </label>--}}
+{{--                            <label class="form__payment form__payment--bitcoin">--}}
+{{--                                <input type="radio" name="payment" value="bitcoin"><span class="form__paymentText">Биткойн перевод</span>--}}
+{{--                            </label>--}}
                         </div>
                     </fieldset>
-                    <label class="form__item form__item--volunteer"><span class="form__label">Кто из волонтеров направил Вас?<span
-                                class="form__volunteerSelect">Вышел на фонд самостоятельно</span>
-              <input class="form__volunteerSelectInput" type="text" name="volunteer" hidden/>
-              </span>
-                    </label>
+                    <div class="form__item form__item--volunteer">
+                        <div class="form__label">Кто из волонтеров направил Вас?
+                            <input class="form__volunteerSelect" type="text" data-modal=".modal--selectVolunteer" value="Вышел на фонд самостоятельно" readonly />
+                        </div>
+                    </div>
                     <label class="form__item form__item--checkbox">
                         <input type="checkbox" name="offer-agree" required><span class="form__label">Соглашаюсь с <a
                                 href="#0" target="_blank">офертой</a></span>
@@ -192,6 +192,75 @@
                 </form>
             </div>
             <button class="modal__close">×</button>
+        </div>
+    </div>
+</div>
+<!-- modal--selectVolunteer-->
+<div class="modal modal--selectVolunteer">
+    <div class="modal__bg"></div>
+    <div class="modal__inner">
+        <div class="modal__content cntWrp">
+            <h2 class="modal__title">Выберите волонтера</h2>
+            <div class="modal__body">Оформив ежемесячное пожертвование вы помогаете активистам «SaveШиес!» в борьбе против незаконного строительства мусорного.</div>
+            <input class="modal__search" type="text" placeholder="Введите имя" />
+            <div class="modal__list">
+                <ul class="volunteersList">
+                    <li class="volunteersList__item"><span class="volunteersList__name">Вышел на фонд самостоятельно</span>
+                    </li><!-- for i in volunteersList-->
+                    <!--   +e('item')-->
+                    <!--     if i.image-->
+                    <!--       +e('image'): img(src=`./files/team/${i.image}` alt="")-->
+                    <!--     +e('name') !{i.name}-->
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Осипов Семён</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Рымар Богдан</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Шестаков Даниил</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Герасимов Прохор</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Коцюбинский Игорь</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Кузьмин Болеслав</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Повалий Яромир</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Гайчук Устин</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Полищук Захар</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Кузнецов Назар</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Тихонов Юлий</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Виноградов Фёдор</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Терентьев Александр</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Палий Олег</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Ефремов Михаил</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Тарасюк Максим</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Рогов Жерар</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Киселёв Денис</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Спивак Хильда</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Сафонова Искра</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Комарова Ирина</span>
+                    </li>
+                    <li class="volunteersList__item"><span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span><span class="volunteersList__name">Большакова Пелагея</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal__btns">
+                <button class="button modal__button modal__button--apply">Подтвердить</button>
+                <button class="button modal__button modal__button--cancel">Отмена</button>
+            </div>
         </div>
     </div>
 </div>

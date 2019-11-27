@@ -186,7 +186,8 @@
                 <div class="modal__body">Здравствуйте. Здравствуйте. Оформив ежемесячное пожертвование вы помогаете активистам «SaveШиес!» в борьбе против незаконного строительства мусорного полигона.</div>
                 <div class="modal__form">
                     <!-- form--reg-->
-                    <form class="form form--reg">
+                    <form class="form form--reg" method="post" enctype="multipart/form-data" action="{{ url('register-volunteer') }}">
+                        @csrf
                         <div class="form__item form__item--photo">
                             <div class="form__imgWrp">
                                 <img class="form__image" src="/files/photo-placeholder.svg" />

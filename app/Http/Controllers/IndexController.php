@@ -38,4 +38,9 @@ class IndexController extends Controller
     {
         return view('thank-you');
     }
+
+    public function referral()
+    {
+        return view('referral-page');
+    }
 }

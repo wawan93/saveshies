@@ -72,7 +72,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: ["/bin/sh", "-c", "cp -r /app/. /var/www/html"]
+                command: ["/bin/sh", "-c", "cp -r /app/. /var/www/html && cd /var/www/html && php artisan migrate"]
           env:
             - name: APP_ENV
               value: 'local'

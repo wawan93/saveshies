@@ -11,6 +11,7 @@ test:
 
 build:
 	docker build -t $(REPO) -f $(DOCKERFILE_PATH) .
+	docker tag $(REPO) $(REPO):develop
 
 push:
 	docker push $(REPO)

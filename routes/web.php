@@ -15,12 +15,13 @@ Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/volunteers', 'IndexController@volunteers')->name('volunteers');
 Route::get('/support', 'IndexController@support')->name('support');
 Route::get('/thank-you', 'IndexController@thankYou')->name('thank-you');
-//Route::get('/ref/{ref}', 'IndexController@referral')->name('referral');
+Route::get('/ref/{ref}', 'IndexController@referral')->name('referral');
 
 Auth::routes();
 
 Route::post('/donate', 'DonationController@donate')->name('donate');
 Route::post('/donate/upload-photo', 'DonationController@uploadPhoto');
+Route::post('/register-volunteer', 'DonorController@registerVolunteer');
 
 Route::prefix('/admin')
     ->middleware('auth')

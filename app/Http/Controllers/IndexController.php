@@ -33,4 +33,9 @@ class IndexController extends Controller
     {
         return view('support');
     }
+
+    public function thankYou()
+    {
+        return view('thank-you');
+    }
 }

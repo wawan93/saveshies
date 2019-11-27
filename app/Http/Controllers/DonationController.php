@@ -20,91 +20,28 @@ class DonationController extends Controller
             ])
         );
 
+        $amount = $request->get('amount') ?? $request->get('amount-fix');
         $donation = Donation::create([
             'donor_id' => $donor->id,
-            'amount' => $request->get('amount'),
+            'amount' => $amount,
         ]);
 
         if ($donation === null) {
             throw new BadRequestHttpException();
         }
 
-        return response()->redirectTo('support');
+        return response()->redirectTo('thank-you');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function uploadPhoto(Request $request)
     {
-        //
+        if ($request->hasFile('file')) {
+            $filename = $request->file('file')->getFilename() .
+                '.' . $request->file('file')->getClientOriginalExtension();
+            $request->file('file')->storeAs('avatars', $filename, 'public');
+        }
+
+        return redirect()->to('volunteers');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Donation $donation
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Donation $donation)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Donation $donation
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Donation $donation)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Donation $donation
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Donation $donation)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param \App\Donation $donation
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Donation $donation)
-    {
-        //
-    }
 }

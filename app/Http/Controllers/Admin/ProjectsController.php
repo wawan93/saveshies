@@ -57,10 +57,10 @@ class ProjectsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'description' => 'required|min:10'
-		]);
+            'description' => 'required|min:10'
+        ]);
         $requestData = $request->all();
-                if ($request->hasFile('icon')) {
+        if ($request->hasFile('icon')) {
             $requestData['icon'] = $request->file('icon')
                 ->storeAs('uploads', $request->file('icon')->getClientOriginalName(), 'public');
         }
@@ -73,7 +73,7 @@ class ProjectsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      *
      * @return \Illuminate\View\View
      */
@@ -87,7 +87,7 @@ class ProjectsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      *
      * @return \Illuminate\View\View
      */
@@ -102,17 +102,17 @@ class ProjectsController extends Controller
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param  int  $id
+     * @param int $id
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-			'description' => 'required|min:10'
-		]);
+            'description' => 'required|min:10'
+        ]);
         $requestData = $request->all();
-                if ($request->hasFile('icon')) {
+        if ($request->hasFile('icon')) {
 
             $requestData['icon'] = $request->file('icon')
                 ->storeAs('uploads', $request->file('icon')->getClientOriginalName(), 'public');
@@ -127,7 +127,7 @@ class ProjectsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */

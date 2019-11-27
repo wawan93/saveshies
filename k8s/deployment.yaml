@@ -75,6 +75,8 @@ spec:
           env:
             - name: APP_ENV
               value: 'production'
+            - name: APP_DEBUG
+              value: 'false'
             - name: APP_NAME
               value: 'SaveШиес!'
             - name: APP_URL
@@ -122,3 +124,5 @@ spec:
             - name: nginx-config-volume
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
+            - name: logs-storage
+              mountPath: /var/www/html/storage

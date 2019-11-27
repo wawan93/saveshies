@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Donor;
 use App\Project;
+use Facade\FlareClient\Http\Exceptions\NotFound;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -39,8 +41,12 @@ class IndexController extends Controller
         return view('thank-you');
     }
 
-    public function referral()
+    public function referral($ref)
     {
-        return view('referral-page');
+        $donor = Donor::where(['uuid' => $ref])->first();
+        if (!$donor) {
+            throw new NotFound();
+        }
+        return view('referral-page', compact('donor'));
     }
 }

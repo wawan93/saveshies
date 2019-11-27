@@ -14,10 +14,10 @@
                     <!-- volunteer-card-->
                     <section class="volunteerCard volunteerCard--full">
                         <div class="volunteerCard__image">
-                            <img src="./files/volunteers/volunteer-01.png" alt="Волонтер благотворительного фонда SaveШиес undefined">
+                            <img src="{{ url(Storage::url($donor->photo)) }}" alt="Волонтер благотворительного фонда SaveШиес undefined">
                         </div>
                         <div class="volunteerCard__cnt">
-                            <h3 class="volunteerCard__name">Константин Бережной<span class="volunteerCard__tooltip" hidden>Вы перешли по ссылке от нашего волонтера. Мы не перечисляем процент волонтерам, но очень их благодарим за помощь</span>
+                            <h3 class="volunteerCard__name">{{ $donor->name }} {{ $donor->surname }}<span class="volunteerCard__tooltip" hidden>Вы перешли по ссылке от нашего волонтера. Мы не перечисляем процент волонтерам, но очень их благодарим за помощь</span>
                             </h3>
                             <div class="volunteerCard__state">
                                 <div class="volunteerCard__label">Собрано</div>
@@ -93,7 +93,7 @@
                         </fieldset>
                         <div class="form__item form__item--volunteer">
                             <div class="form__label">Кто из волонтеров направил Вас?
-                                <input class="form__volunteerSelect" type="text" data-modal=".modal--selectVolunteer" value="Вышел на фонд самостоятельно" readonly />
+                                <input class="form__volunteerSelect" disabled type="text" data-modal=".modal--selectVolunteer" value="{{ $donor->name }} {{ $donor->surname }}" readonly />
                             </div>
                         </div>
                         <label class="form__item form__item--checkbox">

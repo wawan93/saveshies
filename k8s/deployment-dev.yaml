@@ -84,6 +84,12 @@ spec:
               value: 'https://shies.demo.wawan.pro'
             - name: ASSET_URL
               value: 'https://shies.demo.wawan.pro'
+            - name: MAIL_DRIVER
+              value: 'mailgun'
+            - name: MAILGUN_DOMAIN
+              value: 'sandbox605a12e3dfe44a5496d466802b636bf7.mailgun.org'
+            - name: MAILGUN_SECRET
+              value: 'a44d4a53b879d97a86ec5e696b2de370-e470a504-adfb9cc3'
             - name: APP_KEY
               valueFrom:
                 secretKeyRef:

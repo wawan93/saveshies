@@ -83,17 +83,17 @@
                                 <label class="form__payment form__payment--yandex">
                                     <input type="radio" name="payment" value="yandex" checked><span class="form__paymentText">Яндекс. деньги</span>
                                 </label>
-                                <label class="form__payment form__payment--card">
-                                    <input type="radio" name="payment" value="card"><span class="form__paymentText">Банковский перевод</span>
-                                </label>
-                                <label class="form__payment form__payment--bitcoin">
-                                    <input type="radio" name="payment" value="bitcoin"><span class="form__paymentText">Биткойн перевод</span>
-                                </label>
+{{--                                <label class="form__payment form__payment--card">--}}
+{{--                                    <input type="radio" name="payment" value="card"><span class="form__paymentText">Банковский перевод</span>--}}
+{{--                                </label>--}}
+{{--                                <label class="form__payment form__payment--bitcoin">--}}
+{{--                                    <input type="radio" name="payment" value="bitcoin"><span class="form__paymentText">Биткойн перевод</span>--}}
+{{--                                </label>--}}
                             </div>
                         </fieldset>
-                        <div class="form__item form__item--volunteer">
+                        <div class="form__item form__item--volunteer visually-hidden">
                             <div class="form__label">Кто из волонтеров направил Вас?
-                                <input class="form__volunteerSelect" disabled type="text" data-modal=".modal--selectVolunteer" value="{{ $donor->name }} {{ $donor->surname }}" readonly />
+                                <input class="form__volunteerSelect" disabled type="hidden" data-modal=".modal--selectVolunteer" value="{{ $donor->id }}" readonly />
                             </div>
                         </div>
                         <label class="form__item form__item--checkbox">

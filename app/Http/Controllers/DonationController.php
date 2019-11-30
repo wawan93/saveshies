@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Donation;
 use App\Donor;
+use App\Mail\DonationSuccessful;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
@@ -29,6 +30,8 @@ class DonationController extends Controller
         if ($donation === null) {
             throw new BadRequestHttpException();
         }
+
+        \Mail::to($donor)->send(new DonationSuccessful($donation));
 
         return response()->redirectTo('thank-you');
     }

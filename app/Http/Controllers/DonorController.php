@@ -28,6 +28,8 @@ class DonorController extends Controller
             $requestData['photo'] = $request->file('photo')->storeAs('avatars', $filename, 'public');
         }
 
+        $requestData['is_volunteer'] = true;
+
         $donor = Donor::firstOrCreate(['email' => $requestData['email']], $requestData);
         $donor->update($requestData);
 

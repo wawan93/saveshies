@@ -231,22 +231,12 @@
                     <li class="volunteersList__item" data-id="0">
                         <span class="volunteersList__name">Вышел на фонд самостоятельно</span>
                     </li>
-                    <li class="volunteersList__item" data-id="22">
-                        <span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span>
-                        <span class="volunteersList__name">Константин Македонский</span>
+                    @foreach($volunteers_select as $volunteer)
+                    <li class="volunteersList__item" data-id="{{ $volunteer->id }}">
+                        <span class="volunteersList__image"><img src="{{ url(Storage::url($volunteer->photo)) }}" alt=""></span>
+                        <span class="volunteersList__name">{{ $volunteer->name }} {{ $volunteer->surname }}</span>
                     </li>
-                    <li class="volunteersList__item" data-id="33">
-                        <span class="volunteersList__image"><img src="./files/team/team-08.png" alt=""></span>
-                        <span class="volunteersList__name">Александр Иванов</span>
-                    </li>
-                    <li class="volunteersList__item" data-id="44">
-                        <span class="volunteersList__image"><img src="./files/team/team-07.png" alt=""></span>
-                        <span class="volunteersList__name">Сергей Козырев</span>
-                    </li>
-                    <li class="volunteersList__item" data-id="555">
-                        <span class="volunteersList__image"><img src="./files/team/team-02.png" alt=""></span>
-                        <span class="volunteersList__name">Екатерина Карнаух</span>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="modal__btns">

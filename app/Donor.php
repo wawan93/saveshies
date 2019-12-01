@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -43,4 +44,9 @@ use Illuminate\Database\Eloquent\Model;
 class Donor extends Model
 {
     protected $guarded = ['id'];
+
+    public function scopeVolunteers(Builder $query)
+    {
+        return $query->where('is_volunteer', '=', true);
+    }
 }

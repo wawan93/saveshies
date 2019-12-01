@@ -79,7 +79,10 @@
                             <div class="form__imgWrp">
                                 <img class="form__image" src="/files/photo-placeholder.svg" />
                             </div>
-                            <label class="form__label"><span class="form__labelTxt">Ваше фото*</span><span class="form__downloadBtn form__downloadBtn--vk">Загрузить с вк</span><span class="form__downloadBtn form__downloadBtn--comp">Загрузить с компьютера</span>
+                            <label class="form__label">
+                                <span class="form__labelTxt">Ваше фото*</span>
+{{--                                <span class="form__downloadBtn form__downloadBtn--vk" disabled>Загрузить с вк</span>--}}
+                                <span class="form__downloadBtn form__downloadBtn--comp">Загрузить с компьютера</span>
                                 <input type="file" hidden name="photo">
                             </label>
                         </div>

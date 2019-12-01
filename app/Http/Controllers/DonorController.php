@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Donor;
+use App\Mail\VolunteerRegistered;
 use Illuminate\Http\Request;
 
 class DonorController extends Controller
@@ -18,6 +19,7 @@ class DonorController extends Controller
             'vk',
             'inst',
             'fb',
+            'referrer',
         ]);
 
         if ($request->hasFile('photo')) {
@@ -28,6 +30,8 @@ class DonorController extends Controller
 
         $donor = Donor::firstOrCreate(['email' => $requestData['email']], $requestData);
         $donor->update($requestData);
+
+        \Mail::to($donor)->send(new VolunteerRegistered($donor));
 
         return redirect()->to('/ref/' . $donor->uuid);
     }

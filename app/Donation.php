@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $payed_through
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int|null $referrer
+ * @property int|null $project_id
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation query()
@@ -22,7 +24,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation whereDonorId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation wherePayedThrough($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation whereProjectId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation whereRecurrent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation whereReferrer($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Donation whereUpdatedAt($value)
  * @mixin \Eloquent
  */

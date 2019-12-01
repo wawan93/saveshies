@@ -25,6 +25,8 @@ class DonationController extends Controller
         $donation = Donation::create([
             'donor_id' => $donor->id,
             'amount' => $amount,
+            'referrer' => $request->get('referrer'),
+            'project_id' => 0, // TODO: $request->get('project_id')
         ]);
 
         if ($donation === null) {

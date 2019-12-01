@@ -49,4 +49,19 @@ class Donor extends Model
     {
         return $query->where('is_volunteer', '=', true);
     }
+
+    public function getCollectedAttribute()
+    {
+        return $this->referrals()->sum('amount');
+    }
+
+    public function referrals()
+    {
+        return $this->hasMany(Donation::class, 'referrer');
+    }
+
+    public function donations()
+    {
+        return $this->hasMany(Donation::class, 'donor_id');
+    }
 }

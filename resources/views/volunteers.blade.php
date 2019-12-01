@@ -35,136 +35,23 @@
                 <div class="volunteers__inner inner">
                     <h2 class="volunteers__heading blockTitle">Лучшие волонтеры</h2>
                     <ul class="volunteers__list listReset">
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-01.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Константин Бережной</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-02.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Екатерина Карнаух</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-03.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Алексей Попов</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-04.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Сергей Козырев</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-01.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Константин Бережной</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-02.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Екатерина Карнаух</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-03.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Алексей Попов</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-04.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Сергей Козырев</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-01.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Константин Бережной</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
-                        <li class="volunteers__item">
-                            <!-- volunteer-card-->
-                            <section class="volunteerCard">
-                                <div class="volunteerCard__image">
-                                    <img src="/files/volunteers/volunteer-02.png"
-                                         alt="Волонтер благотворительного фонда SaveШиес undefined">
-                                </div>
-                                <div class="volunteerCard__cnt">
-                                    <h3 class="volunteerCard__name">Екатерина Карнаух</h3>
-                                    <div class="volunteerCard__text">Собрано - 22 259 670 ₽</div>
-                                </div>
-                            </section>
-                        </li>
+                        @foreach($volunteers_select as $volunteer)
+                            <li class="volunteers__item">
+                                <!-- volunteer-card-->
+                                <section class="volunteerCard">
+                                    <div class="volunteerCard__image">
+                                        <img src="{{ url(Storage::url($volunteer->photo)) }}"
+                                             alt="Волонтер благотворительного фонда SaveШиес {{ $volunteer->name }} {{ $volunteer->surname }}">
+                                    </div>
+                                    <div class="volunteerCard__cnt">
+                                        <h3 class="volunteerCard__name">
+                                            <a href="{{ url('/ref/'.$volunteer->uuid) }}">{{ $volunteer->name }} {{ $volunteer->surname }}</a>
+                                        </h3>
+                                        <div class="volunteerCard__text">Собрано - {{ number_format($volunteer->collected, 0, '.', ' ') }} ₽</div>
+                                    </div>
+                                </section>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </section><!-- blackBlock--reg-->

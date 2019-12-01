@@ -21,11 +21,11 @@
                             </h3>
                             <div class="volunteerCard__state">
                                 <div class="volunteerCard__label">Собрано</div>
-                                <div class="volunteerCard__value">22 259 670 ₽</div>
+                                <div class="volunteerCard__value">{{ number_format($donor->collected, 0, '.', ' ') }} ₽</div>
                             </div>
                             <div class="volunteerCard__state">
                                 <div class="volunteerCard__label">Поддержали</div>
-                                <div class="volunteerCard__value">57 000 чел</div>
+                                <div class="volunteerCard__value">{{ number_format($donor->referrals()->count(), 0, '.', ' ') }} чел</div>
                             </div>
                         </div>
                     </section>

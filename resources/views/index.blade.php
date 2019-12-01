@@ -76,15 +76,15 @@
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Собрано</div>
-                                                <div class="donationCard__value">{{ $totals['money'] }} ₽</div>
+                                                <div class="donationCard__value">{{ number_format($totals['money'], 0, '.', ' ') }} ₽</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">{{ $totals['onetime_donors'] }} чел</div>
+                                                <div class="donationCard__value">{{ number_format($totals['onetime_donors'], 0, '.', ' ') }} чел</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">{{ $totals['regular_donors'] }} чел</div>
+                                                <div class="donationCard__value">{{ number_format($totals['regular_donors'], 0, '.', ' ') }} чел</div>
                                             </div>
                                         </div>
                                     </div>
@@ -107,17 +107,17 @@
                                         <div class="donationCard__infos">
                                             <div class="donationCard__info barLine" data-bar-from="{{ $project->collected }}"
                                                  data-bar-to="{{ $project->goal }}">
-                                                <div class="donationCard__now">{{ $project->collected }} ₽</div>
+                                                <div class="donationCard__now">{{ number_format($project->collected, 0, '.', ' ') }} ₽</div>
                                                 из
-                                                <div class="donationCard__need">{{ $project->goal }} ₽</div>
+                                                <div class="donationCard__need">{{ number_format($project->goal, 0, '.', ' ') }} ₽</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">{{ $project->onetime_donors }} чел</div>
+                                                <div class="donationCard__value">{{ number_format($project->onetime_donors, 0, '.', ' ') }} чел</div>
                                             </div>
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">{{ $project->regular_donors }} чел</div>
+                                                <div class="donationCard__value">{{ number_format($project->regular_donors, 0, '.', ' ') }} чел</div>
                                             </div>
                                         </div>
                                     </div>

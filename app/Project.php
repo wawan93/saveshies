@@ -69,4 +69,10 @@ class Project extends Model
         return $query->where('is_active', true);
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+
 }

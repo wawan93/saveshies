@@ -88,7 +88,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
+                                    <div class="buttons donationCard__buttons">
+                                        <a class="button buttons__button" href="#0" data-modal=".modal--donate">Поддержать</a>
+                                        <a class="moreBtn buttons__moreBtn" href="{{ url('/project/main') }}">Подробнее</a>
+                                    </div>
                                 </article>
                             </li>
                             @foreach($projects as $project)
@@ -121,7 +124,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="button donationCard__button" data-modal=".modal--donate" href="#0">Поддержать</a>
+                                    <div class="buttons donationCard__buttons">
+                                        <a class="button buttons__button" href="#0" data-modal=".modal--donate">Поддержать</a>
+                                        <a class="moreBtn buttons__moreBtn" href="{{ url('/project/' . $project->id) }}">Подробнее</a>
+                                    </div>
                                 </article>
                             </li>
                             @endforeach

@@ -16,6 +16,7 @@ Route::get('/volunteers', 'IndexController@volunteers')->name('volunteers');
 Route::get('/support', 'IndexController@support')->name('support');
 Route::get('/thank-you', 'IndexController@thankYou')->name('thank-you');
 Route::get('/ref/{ref}', 'IndexController@referral')->name('referral');
+Route::get('/project/{project}', 'ProjectsController@view');
 
 Auth::routes();
 

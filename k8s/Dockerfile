@@ -43,6 +43,8 @@ RUN docker-php-ext-install \
     zip \
     bcmath
 
+COPY k8s/upload.ini /usr/local/etc/php/conf.d/uploads.ini
+
 # Install composer
 ENV COMPOSER_HOME /composer
 ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH

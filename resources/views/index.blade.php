@@ -99,7 +99,7 @@
                                         </div>
                                     </div>
                                     <div class="buttons donationCard__buttons">
-                                        <a class="button buttons__button" href="#0" data-modal=".modal--donate">Поддержать</a>
+                                        <a class="button buttons__button" href="#0" data-slug="{{ $project->slug }}" data-modal=".modal--donate">Поддержать</a>
                                         <a class="moreBtn buttons__moreBtn" href="{{ url('/project/' . $project->slug) }}">Подробнее</a>
                                     </div>
                                 </article>

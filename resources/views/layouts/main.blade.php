@@ -205,6 +205,7 @@
                             class="form__label">Соглашаюсь на <a
                                 href="#0" target="_blank">обработку персональных данных</a></span>
                     </label>
+                    <input class="form__source" hidden type="text" name="source" value="main">
                     <div class="form__actions">
                         <button class="button form__button" type="submit">Поддержать фонд</button>
                         <a class="form__link" href="#0" target="_blank">Управлять ежемесячным

@@ -27,7 +27,7 @@ class DonationController extends Controller
             'donor_id' => $donor->id,
             'amount' => $amount,
             'referrer' => (int)$request->get('referrer'),
-            'project_id' => $request->get('project_id'),
+            'project_id' => $request->get('source'),
         ]);
 
         if ($donation === null) {

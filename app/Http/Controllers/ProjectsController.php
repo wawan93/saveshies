@@ -9,6 +9,6 @@ class ProjectsController extends Controller
 {
     public function view(Project $project)
     {
-        return view('support');
+        return view('project', compact('project'));
     }
 }

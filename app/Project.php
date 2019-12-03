@@ -56,7 +56,7 @@ class Project extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'description', 'icon', 'goal', 'collected', 'regular_donors', 'onetime_donors', 'is_active'];
+    protected $fillable = ['title', 'slug', 'description', 'icon', 'goal', 'collected', 'regular_donors', 'onetime_donors', 'is_active'];
 
     /**
      * Only active projects.
@@ -73,6 +73,4 @@ class Project extends Model
     {
         return 'slug';
     }
-
-
 }

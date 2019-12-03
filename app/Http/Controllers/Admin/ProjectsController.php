@@ -23,6 +23,7 @@ class ProjectsController extends Controller
         if (!empty($keyword)) {
             $projects = Project::where('title', 'LIKE', "%$keyword%")
                 ->orWhere('description', 'LIKE', "%$keyword%")
+                ->orWhere('slug', 'LIKE', "%$keyword%")
                 ->orWhere('icon', 'LIKE', "%$keyword%")
                 ->orWhere('goal', 'LIKE', "%$keyword%")
                 ->orWhere('collected', 'LIKE', "%$keyword%")

@@ -61,39 +61,6 @@
                     <h2 class="activeDonation__heading blockTitle">Активные сборы</h2>
                     <div class="activeDonation__scroll scroll">
                         <ul class="activeDonation__list listReset">
-                            <li class="activeDonation__item">
-                                <!-- mixin donation-card-->
-                                <article class="donationCard">
-                                    <div class="donationCard__icon">
-                                        <img src="/files/donations/old-tablet.svg" alt="">
-                                    </div>
-                                    <div class="donationCard__cnt">
-                                        <div class="donationCard__header">
-                                            <h3 class="donationCard__title">Общий фонд</h3>
-                                            <p class="donationCard__body">Деньги распределяются по мере необходимости на
-                                                проекты.</p>
-                                        </div>
-                                        <div class="donationCard__infos">
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Собрано</div>
-                                                <div class="donationCard__value">{{ number_format($totals['money'], 0, '.', ' ') }} ₽</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Разовая поддержка</div>
-                                                <div class="donationCard__value">{{ number_format($totals['onetime_donors'], 0, '.', ' ') }} чел</div>
-                                            </div>
-                                            <div class="donationCard__info">
-                                                <div class="donationCard__label">Ежемесячная поддержка</div>
-                                                <div class="donationCard__value">{{ number_format($totals['regular_donors'], 0, '.', ' ') }} чел</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="buttons donationCard__buttons">
-                                        <a class="button buttons__button" href="#0" data-modal=".modal--donate">Поддержать</a>
-                                        <a class="moreBtn buttons__moreBtn" href="{{ url('/project/main') }}">Подробнее</a>
-                                    </div>
-                                </article>
-                            </li>
                             @foreach($projects as $project)
 
                             <li class="activeDonation__item">
@@ -108,12 +75,19 @@
                                             <p class="donationCard__body">{{ $project->description }}</p>
                                         </div>
                                         <div class="donationCard__infos">
+                                            @if($project->slug == 'main')
+                                                <div class="donationCard__info">
+                                                    <div class="donationCard__label">Собрано</div>
+                                                    <div class="donationCard__value">{{ number_format($totals['money'], 0, '.', ' ') }} ₽</div>
+                                                </div>
+                                            @else
                                             <div class="donationCard__info barLine" data-bar-from="{{ $project->collected }}"
                                                  data-bar-to="{{ $project->goal }}">
                                                 <div class="donationCard__now">{{ number_format($project->collected, 0, '.', ' ') }} ₽</div>
                                                 из
                                                 <div class="donationCard__need">{{ number_format($project->goal, 0, '.', ' ') }} ₽</div>
                                             </div>
+                                            @endif
                                             <div class="donationCard__info">
                                                 <div class="donationCard__label">Разовая поддержка</div>
                                                 <div class="donationCard__value">{{ number_format($project->onetime_donors, 0, '.', ' ') }} чел</div>
@@ -126,7 +100,7 @@
                                     </div>
                                     <div class="buttons donationCard__buttons">
                                         <a class="button buttons__button" href="#0" data-modal=".modal--donate">Поддержать</a>
-                                        <a class="moreBtn buttons__moreBtn" href="{{ url('/project/' . $project->id) }}">Подробнее</a>
+                                        <a class="moreBtn buttons__moreBtn" href="{{ url('/project/' . $project->slug) }}">Подробнее</a>
                                     </div>
                                 </article>
                             </li>

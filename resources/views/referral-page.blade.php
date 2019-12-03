@@ -93,7 +93,7 @@
                         </fieldset>
                         <div class="form__item form__item--volunteer visually-hidden">
                             <div class="form__label">Кто из волонтеров направил Вас?
-                                <input class="form__volunteerSelect" disabled type="hidden" name="referrer" data-modal=".modal--selectVolunteer" value="{{ $donor->id }}" readonly />
+                                <input class="form__volunteerSelect" type="hidden" name="referrer" value="{{ $donor->id }}" readonly />
                             </div>
                         </div>
                         <label class="form__item form__item--checkbox">

@@ -216,82 +216,64 @@
                     <div class="team__people">
                         <ul class="team__images listReset">
                             <li class="team__image">
-                                <img src="/files/team/team-01.png" alt="Член наблюдательного совета Алексей Попов">
+                                <img src="/files/team/Елена Калинина.jpeg" alt="Член наблюдательного совета Елена Калинина">
                             </li>
                             <li class="team__image">
-                                <img src="/files/team/team-02.png" alt="Член наблюдательного совета Петр Алексеенко">
+                                <img src="/files/team/Игорь Сажин.jpeg" alt="Член наблюдательного совета Игорь Сажин">
                             </li>
                             <li class="team__image">
-                                <img src="/files/team/team-03.png" alt="Член наблюдательного совета Анна Семенова">
+                                <img src="/files/team/Андрей Чураков.jpeg" alt="Член наблюдательного совета Андрей Чураков">
                             </li>
                             <li class="team__image">
-                                <img src="/files/team/team-04.png" alt="Член наблюдательного совета Даниил Иванов">
+                                <img src="/files/team/Олег Мандрыкин.jpeg" alt="Член наблюдательного совета Олег Мандрыкин">
                             </li>
                         </ul>
                         <ul class="team__contents listReset">
                             <li class="team__content">
-                                <div class="team__name">Алексей Попов</div>
-                                <p class="team__personTxt">Влиять на приоритеты фандрайзинговых проектов, на их
-                                    появление или удаление наблюдательный совет не может.</p>
+                                <div class="team__name">Елена Калинина</div>
+                                <p class="team__personTxt">Экоактивист, представитель инициативной группы по проведению референдума.</p>
                                 <ul class="team__socials listReset">
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Вконтакте</a>
+                                        <a href="https://vk.com/id217939944" target="_blank">Вконтакте</a>
                                     </li>
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Фейсбук</a>
-                                    </li>
-                                    <li class="team__social">
-                                        <a href="#0" target="_blank">Инстаграм</a>
+                                        <a href="https://teleg.run/Lenakalina" target="_blank">Telegram</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="team__content">
-                                <div class="team__name">Петр Алексеенко</div>
-                                <p class="team__personTxt">Влиять на приоритеты фандрайзинговых проектов, на их
-                                    появление или удаление наблюдательный совет не может. Влиять на приоритеты
-                                    фандрайзинговых проектов, на их появление или удаление наблюдательный совет не
-                                    может.</p>
+                                <div class="team__name">Игорь Сажин</div>
+                                <p class="team__personTxt">Правозащитник, Коми правозащитная комиссия Мемориал</p>
                                 <ul class="team__socials listReset">
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Вконтакте</a>
+                                        <a href="https://www.facebook.com/kpkmemorial" target="_blank">Фейсбук</a>
                                     </li>
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Фейсбук</a>
-                                    </li>
-                                    <li class="team__social">
-                                        <a href="#0" target="_blank">Инстаграм</a>
+                                        <a href="https://vk.com/id2563615" target="_blank">Вконтакте</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="team__content">
-                                <div class="team__name">Анна Семенова</div>
-                                <p class="team__personTxt">Влиять на приоритеты фандрайзинговых проектов, на их
-                                    появление или удаление наблюдательный совет не может.</p>
+                                <div class="team__name">Андрей Чураков</div>
+                                <p class="team__personTxt">Координатора Комитета Гражданских Инициатив по Архангельской области</p>
                                 <ul class="team__socials listReset">
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Вконтакте</a>
+                                        <a href="https://vk.com/2achurakov" target="_blank">Вконтакте</a>
                                     </li>
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Фейсбук</a>
-                                    </li>
-                                    <li class="team__social">
-                                        <a href="#0" target="_blank">Инстаграм</a>
+                                        <a href="https://teleg.run/Churakov" target="_blank">Telegram</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="team__content">
-                                <div class="team__name">Даниил Иванов</div>
-                                <p class="team__personTxt">Влиять на приоритеты фандрайзинговых проектов, на их
-                                    появление или удаление наблюдательный совет не может.</p>
+                                <div class="team__name">Олег Мандрыкин</div>
+                                <p class="team__personTxt">Активист движения "Чистый Север 29"</p>
                                 <ul class="team__socials listReset">
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Вконтакте</a>
+                                        <a href="https://vk.com/variantmandrykina" target="_blank">Вконтакте</a>
                                     </li>
                                     <li class="team__social">
-                                        <a href="#0" target="_blank">Фейсбук</a>
-                                    </li>
-                                    <li class="team__social">
-                                        <a href="#0" target="_blank">Инстаграм</a>
+                                        <a href="https://teleg.run/Platan29" target="_blank">Telegram</a>
                                     </li>
                                 </ul>
                             </li>

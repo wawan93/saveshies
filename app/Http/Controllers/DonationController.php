@@ -39,8 +39,8 @@ class DonationController extends Controller
         $mainProject->collected += $amount;
         $mainProject->save();
 
-        if ($mainProject->id != $request->get('source')) {
-            $project = Project::find($request->get('source'));
+        if ($mainProject->slug != $request->get('source')) {
+            $project = Project::where('slug', '=', $request->get('source'))->first();
             $project->collected += $amount;
             $project->save();
         }

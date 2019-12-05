@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Donation;
 use App\Donor;
 use App\Mail\DonationSuccessful;
+use App\Project;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
@@ -32,6 +33,16 @@ class DonationController extends Controller
 
         if ($donation === null) {
             throw new BadRequestHttpException();
+        }
+
+        $mainProject = Project::where('slug', '=', 'main')->first();
+        $mainProject->collected += $amount;
+        $mainProject->save();
+
+        if ($mainProject->id != $request->get('source')) {
+            $project = Project::find($request->get('source'));
+            $project->collected += $amount;
+            $project->save();
         }
 
         \Mail::to($donor)->send(new DonationSuccessful($donation));

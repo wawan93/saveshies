@@ -8,6 +8,11 @@
     <input class="form-control" name="slug" type="text" id="slug" value="{{ isset($project->slug) ? $project->slug : ''}}" >
     {!! $errors->first('slug', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group {{ $errors->has('priority') ? 'has-error' : ''}}">
+    <label for="priority" class="control-label">{{ 'priority' }}</label>
+    <input class="form-control" name="priority" type="number" id="priority" value="{{ isset($project->priority) ? $project->priority : ''}}" >
+    {!! $errors->first('priority', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
     <label for="description" class="control-label">{{ 'Description' }}</label>
     <textarea class="form-control" rows="5" name="description" type="textarea" id="description" required>{{ isset($project->description) ? $project->description : ''}}</textarea>

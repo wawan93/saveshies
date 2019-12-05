@@ -78,7 +78,7 @@
                                             @if($project->slug == 'main')
                                                 <div class="donationCard__info">
                                                     <div class="donationCard__label">Собрано</div>
-                                                    <div class="donationCard__value">{{ number_format($totals['money'], 0, '.', ' ') }} ₽</div>
+                                                    <div class="donationCard__value">{{ number_format($project->collected, 0, '.', ' ') }} ₽</div>
                                                 </div>
                                             @else
                                             <div class="donationCard__info barLine" data-bar-from="{{ $project->collected }}"

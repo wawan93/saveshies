@@ -1,4 +1,4 @@
-FROM php:fpm-alpine
+FROM php:7.3-fpm-alpine
 
 # Install dev dependencies
 RUN apk add --no-cache --virtual .build-deps \
@@ -42,6 +42,8 @@ RUN docker-php-ext-install \
     gd \
     zip \
     bcmath
+
+COPY k8s/upload.ini /usr/local/etc/php/conf.d/uploads.ini
 
 # Install composer
 ENV COMPOSER_HOME /composer
